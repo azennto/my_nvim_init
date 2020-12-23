@@ -114,13 +114,11 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	call dein#add('vim-airline/vim-airline-themes')
 	"----------
 
-
 	"----------
 	"ayu-vim
 	"----------
 	call dein#add('ayu-theme/ayu-vim')
 	"----------
-	
 	
 	"----------
 	"indentLine
@@ -154,6 +152,12 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	call dein#add('Xuyuanp/nerdtree-git-plugin')
 	call dein#add('ryanoasis/vim-devicons')
 	call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
+	"----------
+	
+	"----------
+	"neoterm
+	"----------
+	call dein#add('kassio/neoterm')
 	"----------
 
 	" Required:
@@ -266,6 +270,15 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 " gitの表示にnerdフォントを使う
 let g:NERDTreeGitStatusUseNerdFonts = 1
+"----------
+
+"----------
+"neoterm
+"----------
+"縦分割
+let g:neoterm_default_mod='tab'
+"ESCでターミナルモードを抜けるため
+tnoremap <silent> <ESC> <C-\><C-n><C-w>
 "----------
 
 "----------
