@@ -116,6 +116,19 @@ if dein#load_state('/Users/azennto/.cache/dein')
 
 
 	"----------
+	"ayu-vim
+	"----------
+	call dein#add('ayu-theme/ayu-vim')
+	"----------
+	
+	
+	"----------
+	"indentLine
+	"----------
+	call dein#add('Yggdroot/indentLine')
+	"----------
+	
+	"----------
 	"vim-auto-save
 	"----------
 	call dein#add('vim-scripts/vim-auto-save')
@@ -253,4 +266,36 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 " gitの表示にnerdフォントを使う
 let g:NERDTreeGitStatusUseNerdFonts = 1
+"----------
+
+"----------
+"ayu-vim
+"----------
+set termguicolors     " enable true colors support
+"let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+"autocmd ColorScheme * highlight Normal guibg=NONE
+"autocmd ColorScheme * highlight NonText guibg=NONE
+"autocmd ColorScheme * highlight LineNr guibg=NONE
+"autocmd ColorScheme * highlight Folded guibg=NONE
+"autocmd ColorScheme * highlight EndOfBuffer guibg=NONE 
+"autocmd ColorScheme * highlight Terminal guibg=NONE
+autocmd ColorScheme * highlight Comment guifg=#5fc7a6
+autocmd ColorScheme * highlight LineNr guifg=#3fabe0
+autocmd ColorScheme * highlight NERDTreeOpenable guifg=#a5d2d4
+autocmd ColorScheme * highlight NERDTreeUp guifg=#a5d2d4
+autocmd ColorScheme * highlight NERDTreeDir guifg=#a5d2d4
+autocmd ColorScheme * highlight NERDTreeFile guifg=#a5d2d4
+autocmd ColorScheme * highlight NERDTreeDirSlash guifg=#3D4751
+colorscheme ayu
+"----------
+
+"----------
+"Indent Line
+"----------
+let g:indentLine_char = 'ǀ'
+let g:indentLine_first_char = 'ǀ'
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0
 "----------
