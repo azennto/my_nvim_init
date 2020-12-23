@@ -116,6 +116,12 @@ if dein#load_state('/Users/azennto/.cache/dein')
 
 
 	"----------
+	"vim-auto-save
+	"----------
+	call dein#add('vim-scripts/vim-auto-save')
+	"----------
+	
+	"----------
 	"rust.vim
 	"----------
 	call dein#add('rust-lang/rust.vim')
@@ -198,5 +204,12 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 "nerdfontを使う
 let g:airline_powerline_fonts = 1
+"----------
+
+"----------
+"vim-auto-save
+"----------
+let g:auto_save = 1
+let g:auto_save_events = ["TextChanged"]
 "----------
 
