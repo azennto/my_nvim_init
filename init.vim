@@ -235,8 +235,8 @@ let g:airline_powerline_fonts = 1
 "----------
 "vim-auto-save
 "----------
-let g:auto_save = 1
-let g:auto_save_events = ["TextChanged"]
+"let g:auto_save = 1
+"let g:auto_save_events = ["TextChanged"]
 "----------
 
 "----------
