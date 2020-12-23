@@ -115,6 +115,19 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	"----------
 
 
+	"----------
+	"rust.vim
+	"----------
+	call dein#add('rust-lang/rust.vim')
+	"----------
+	
+	"----------
+	"lsp
+	"----------
+	call dein#add('prabirshrestha/vim-lsp')
+	call dein#add('mattn/vim-lsp-settings')
+	"----------
+
 	" Required:
 	call dein#end()
 	call dein#save_state()
