@@ -107,6 +107,14 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	call dein#add('Shougo/neosnippet-snippets')
 	"----------
 
+	"----------
+	"vim-airline
+	"----------
+	call dein#add('vim-airline/vim-airline')
+	call dein#add('vim-airline/vim-airline-themes')
+	"----------
+
+
 	" Required:
 	call dein#end()
 	call dein#save_state()
@@ -160,5 +168,22 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 " プレビューを表示しない
 set completeopt-=preview
+"----------
+
+"----------
+"vim-airline
+"----------
+"タブを表示する
+let g:airline#extensions#tabline#enabled = 1
+
+"タブのセパレータの形を指定する
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"パスの表示を指定する
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+"nerdfontを使う
+let g:airline_powerline_fonts = 1
 "----------
 
