@@ -69,6 +69,7 @@ nmap <C-z> :/\(solve\\|input!\)<CR>ji<Tab>
 "ショートカット
 nmap sh :w<CR>:Tnew<CR>gti
 nmap er :LspDocumentDiagnostics<CR>
+nmap ss :w<CR>
 
 
 "----------
