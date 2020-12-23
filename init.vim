@@ -89,6 +89,16 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	" Let dein manage dein
 	" Required:
 	call dein#add('/Users/azennto/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+	"-----------
+	"deoplete.vim
+	"----------
+	call dein#add('Shougo/deoplete.nvim')
+	if !has('nvim')
+		call dein#add('roxma/nvim-yarp')
+		call dein#add('roxma/vim-hug-neovim-rpc')
+	endif
+	"----------
 	" Required:
 	call dein#end()
 	call dein#save_state()
@@ -104,3 +114,9 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+
+"----------
+"deoplete.vim
+"----------
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
