@@ -166,6 +166,12 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	call dein#add('nvim-treesitter/nvim-treesitter')
 	"----------
 
+	"----------
+	"blue-moon
+	"----------
+	call dein#add('kyazdani42/blue-moon')
+	"----------
+
 	" Required:
 	call dein#end()
 	call dein#save_state()
@@ -290,9 +296,9 @@ tnoremap <silent> <ESC> <C-\><C-n><C-w>
 "----------
 "ayu-vim
 "----------
-set termguicolors     " enable true colors support
+"set termguicolors     " enable true colors support
 "let ayucolor="light"  " for light version of theme
-let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
 "autocmd ColorScheme * highlight Normal guibg=NONE
 "autocmd ColorScheme * highlight NonText guibg=NONE
@@ -300,14 +306,14 @@ let ayucolor="mirage" " for mirage version of theme
 "autocmd ColorScheme * highlight Folded guibg=NONE
 "autocmd ColorScheme * highlight EndOfBuffer guibg=NONE 
 "autocmd ColorScheme * highlight Terminal guibg=NONE
-autocmd ColorScheme * highlight Comment guifg=#5fc7a6
-autocmd ColorScheme * highlight LineNr guifg=#3fabe0
-autocmd ColorScheme * highlight NERDTreeOpenable guifg=#a5d2d4
-autocmd ColorScheme * highlight NERDTreeUp guifg=#a5d2d4
-autocmd ColorScheme * highlight NERDTreeDir guifg=#a5d2d4
-autocmd ColorScheme * highlight NERDTreeFile guifg=#a5d2d4
-autocmd ColorScheme * highlight NERDTreeDirSlash guifg=#3D4751
-colorscheme ayu
+"autocmd ColorScheme * highlight Comment guifg=#5fc7a6
+"autocmd ColorScheme * highlight LineNr guifg=#3fabe0
+"autocmd ColorScheme * highlight NERDTreeOpenable guifg=#a5d2d4
+"autocmd ColorScheme * highlight NERDTreeUp guifg=#a5d2d4
+"autocmd ColorScheme * highlight NERDTreeDir guifg=#a5d2d4
+"autocmd ColorScheme * highlight NERDTreeFile guifg=#a5d2d4
+"autocmd ColorScheme * highlight NERDTreeDirSlash guifg=#3D4751
+"colorscheme ayu
 "----------
 
 "----------
@@ -332,5 +338,13 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+"----------
+
+"----------
+"blue-moon
+"----------
+set termguicolors
+colorscheme blue-moon
+let g:lightline = { 'colorscheme': 'blue-moon' }
 "----------
 
