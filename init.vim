@@ -119,25 +119,25 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	"----------
 	call dein#add('ayu-theme/ayu-vim')
 	"----------
-	
+
 	"----------
 	"indentLine
 	"----------
 	call dein#add('Yggdroot/indentLine')
 	"----------
-	
+
 	"----------
 	"vim-auto-save
 	"----------
 	call dein#add('vim-scripts/vim-auto-save')
 	"----------
-	
+
 	"----------
 	"rust.vim
 	"----------
 	call dein#add('rust-lang/rust.vim')
 	"----------
-	
+
 	"----------
 	"lsp
 	"----------
@@ -153,7 +153,7 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	call dein#add('ryanoasis/vim-devicons')
 	call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
 	"----------
-	
+
 	"----------
 	"neoterm
 	"----------
@@ -171,7 +171,7 @@ syntax enable
 
 " If you want to install not installed plugins on startup.
 if dein#check_install()
-  call dein#install()
+	call dein#install()
 endif
 
 "End dein Scripts-------------------------
@@ -198,11 +198,11 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " \ neosnippet#expandable_or_jumpable() ?
 " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+			\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
 if has('conceal')
-  set conceallevel=2 concealcursor=niv
+	set conceallevel=2 concealcursor=niv
 endif
 
 " Enable snipMate compatibility feature.
@@ -252,21 +252,21 @@ autocmd VimEnter * NERDTree
 
 " NERDTreeだけになったらvimを終了
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-    \ quit | endif
+			\ quit | endif
 
 " gitの表示
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✹',
-                \ 'Staged'    :'✚',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
+			\ 'Modified'  :'✹',
+			\ 'Staged'    :'✚',
+			\ 'Untracked' :'✭',
+			\ 'Renamed'   :'➜',
+			\ 'Unmerged'  :'═',
+			\ 'Deleted'   :'✖',
+			\ 'Dirty'     :'✗',
+			\ 'Ignored'   :'☒',
+			\ 'Clean'     :'✔︎',
+			\ 'Unknown'   :'?',
+			\ }
 
 " gitの表示にnerdフォントを使う
 let g:NERDTreeGitStatusUseNerdFonts = 1
