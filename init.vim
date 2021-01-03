@@ -160,6 +160,12 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	call dein#add('kassio/neoterm')
 	"----------
 
+	"----------
+	"nvim-treesitter
+	"----------
+	call dein#add('nvim-treesitter/nvim-treesitter')
+	"----------
+
 	" Required:
 	call dein#end()
 	call dein#save_state()
@@ -312,3 +318,19 @@ let g:indentLine_first_char = 'ǀ'
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 0
 "----------
+
+
+"----------
+"nvim-treesitter
+"----------
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = {},  -- list of language that will be disabled
+  },
+}
+EOF
+"----------
+
