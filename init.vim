@@ -117,7 +117,7 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	"----------
 	"ayu-vim
 	"----------
-	call dein#add('ayu-theme/ayu-vim')
+	"call dein#add('ayu-theme/ayu-vim')
 	"----------
 
 	"----------
