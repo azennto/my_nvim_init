@@ -70,6 +70,7 @@ nmap <C-z> :/\(solve\\|input!\)<CR>ji<Tab>
 nmap sh :w<CR>:vertical rightbelow Tnew<CR><C-w><C-w>
 nmap er :LspDocumentDiagnostics<CR>
 nmap ss :w<CR>
+nmap it gg=G`.
 
 
 "----------
