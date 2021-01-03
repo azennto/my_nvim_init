@@ -67,7 +67,7 @@ set nohlsearch
 nmap <C-z> :/\(solve\\|input!\)<CR>ji<Tab>
 
 "ショートカット
-nmap sh :w<CR>:Tnew<CR>gti
+nmap sh :w<CR>:vertical rightbelow Tnew<CR><C-w><C-w>
 nmap er :LspDocumentDiagnostics<CR>
 nmap ss :w<CR>
 
