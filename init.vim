@@ -235,7 +235,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 "タブのセパレータの形を指定する
 let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#left_alt_sep = '│'
 
 "パスの表示を指定する
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -319,10 +319,9 @@ tnoremap <silent> <ESC> <C-\><C-n><C-w>
 "----------
 "Indent Line
 "----------
-let g:indentLine_char = 'ǀ'
-let g:indentLine_first_char = 'ǀ'
+let g:indentLine_char = '│'
+let g:indentLine_first_char = '│'
 let g:indentLine_showFirstIndentLevel = 1
-let g:indentLine_setColors = 0
 "----------
 
 
