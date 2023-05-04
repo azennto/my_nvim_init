@@ -61,8 +61,6 @@ set incsearch
 " 検索時に最後まで行ったら最初に戻る
 set wrapscan
 
-"競技プログラミング系
-nmap <C-z> :/\(solve\\|input!\)<CR>ji<Tab>
 
 "ショートカット
 nmap sh :w<CR>:vertical rightbelow Tnew<CR><C-w><C-w>
@@ -70,7 +68,8 @@ nmap er :LspDocumentDiagnostics<CR>
 nmap ss :w<CR>
 nmap it gg=G`.
 
-
+" Python
+let g:python3_host_prog = 'D:\Users\kubo.y\AppData\Local\miniconda3\envs\pynvim\python.exe'
 "----------
 "dein.vim
 "----------
@@ -80,15 +79,15 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/azennto/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein.vim
 
 " Required:
-if dein#load_state('/Users/azennto/.cache/dein')
-	call dein#begin('/Users/azennto/.cache/dein')
+if dein#load_state('~/.cache/dein.vim')
+	call dein#begin('~/.cache/dein.vim')
 
 	" Let dein manage dein
 	" Required:
-	call dein#add('/Users/azennto/.cache/dein/repos/github.com/Shougo/dein.vim')
+	call dein#add('~/.cache/dein.vim/repos/github.com/Shougo/dein.vim')
 
 	"-----------
 	"deoplete.vim
@@ -98,6 +97,7 @@ if dein#load_state('/Users/azennto/.cache/dein')
 		call dein#add('roxma/nvim-yarp')
 		call dein#add('roxma/vim-hug-neovim-rpc')
 	endif
+	let g:deoplete#enable_at_startup = 1
 	"----------
 
 	"----------
@@ -114,11 +114,6 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	call dein#add('vim-airline/vim-airline-themes')
 	"----------
 
-	"----------
-	"ayu-vim
-	"----------
-	"call dein#add('ayu-theme/ayu-vim')
-	"----------
 
 	"----------
 	"indentLine
@@ -130,12 +125,6 @@ if dein#load_state('/Users/azennto/.cache/dein')
 	"vim-auto-save
 	"----------
 	call dein#add('vim-scripts/vim-auto-save')
-	"----------
-
-	"----------
-	"rust.vim
-	"----------
-	call dein#add('rust-lang/rust.vim')
 	"----------
 
 	"----------
@@ -294,36 +283,12 @@ tnoremap <silent> <ESC> <C-\><C-n><C-w>
 "----------
 
 "----------
-"ayu-vim
-"----------
-"set termguicolors     " enable true colors support
-"let ayucolor="light"  " for light version of theme
-"let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
-"autocmd ColorScheme * highlight Normal guibg=NONE
-"autocmd ColorScheme * highlight NonText guibg=NONE
-"autocmd ColorScheme * highlight LineNr guibg=NONE
-"autocmd ColorScheme * highlight Folded guibg=NONE
-"autocmd ColorScheme * highlight EndOfBuffer guibg=NONE 
-"autocmd ColorScheme * highlight Terminal guibg=NONE
-"autocmd ColorScheme * highlight Comment guifg=#5fc7a6
-"autocmd ColorScheme * highlight LineNr guifg=#3fabe0
-"autocmd ColorScheme * highlight NERDTreeOpenable guifg=#a5d2d4
-"autocmd ColorScheme * highlight NERDTreeUp guifg=#a5d2d4
-"autocmd ColorScheme * highlight NERDTreeDir guifg=#a5d2d4
-"autocmd ColorScheme * highlight NERDTreeFile guifg=#a5d2d4
-"autocmd ColorScheme * highlight NERDTreeDirSlash guifg=#3D4751
-"colorscheme ayu
-"----------
-
-"----------
 "Indent Line
 "----------
 let g:indentLine_char = '│'
 let g:indentLine_first_char = '│'
 let g:indentLine_showFirstIndentLevel = 1
 "----------
-
 
 "----------
 "nvim-treesitter
